@@ -8,10 +8,11 @@
 
 .loginScreen_body {
     position: absolute;
-    top: 30%;
     padding: 20px;
+    top: 20%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: auto;
     text-align: center;
     z-index: 1;
     color: #fff;
