@@ -21,11 +21,11 @@ function App() {
           email: userAuth.email
         }))
       } else {
-        dispatch(logout);
+        dispatch(logout());
       }
     });
     return unsubscribe;
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="app">
@@ -34,8 +34,9 @@ function App() {
           <LoginScreen></LoginScreen>
         ) : (
           <Routes>
-            <Route path="/profile" element={<ProfileScreen/>}></Route>
             <Route exact path="/" element={<HomeScreen/>}></Route>
+            <Route path="/profile" element={<ProfileScreen/>}></Route>
+            
           </Routes>
         )}
 
